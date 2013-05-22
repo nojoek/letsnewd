@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Time option:</b>
+  <%= @when.time_option %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @when.event_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_when_path(@when) %> |
+<%= link_to 'Back', whens_path %>

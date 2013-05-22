@@ -1,0 +1,25 @@
+<h1>Listing whens</h1>
+
+<table>
+  <tr>
+    <th>Time option</th>
+    <th>Event</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @whens.each do |when| %>
+  <tr>
+    <td><%= when.time_option %></td>
+    <td><%= when.event_id %></td>
+    <td><%= link_to 'Show', when %></td>
+    <td><%= link_to 'Edit', edit_when_path(when) %></td>
+    <td><%= link_to 'Destroy', when, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New When', new_when_path %>

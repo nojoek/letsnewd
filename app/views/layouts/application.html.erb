@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Letsnewd</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <%= stylesheet_link_tag    "base", :media => "all" %>
+<%= stylesheet_link_tag    "custom", :media => "all" %>
+<%= stylesheet_link_tag    "layout", :media => "all" %>
+<%= stylesheet_link_tag    "skeleton", :media => "all" %>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Title</a>
+    <ul class="nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/events">Events</a></li>
+      <li><a href="/events/new">New Event</a></li>
+<li><a href="/users">Users</a></li>
+    </ul>
+  </div>
+</div>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location_name: MyString
+  event_id: 1
+  address: MyString
+  zip: MyString
+
+two:
+  location_name: MyString
+  event_id: 1
+  address: MyString
+  zip: MyString
