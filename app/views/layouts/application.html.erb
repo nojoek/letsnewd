@@ -20,12 +20,12 @@
       <li><a href="/events/new">New Event</a></li>
 
 		<li><a href="/users">Users</a></li>
-
+<li>
 		<% if session[:user_id].present? %>
 			<%= link_to 'logout', sessions_url, method: 'delete' %>
 			<%else%>
 			<%= link_to 'Sign in', new_session_url %>
-<% end %>
+<% end %></li>
     </ul>
   </div>
 </div>
