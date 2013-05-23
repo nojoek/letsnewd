@@ -3,11 +3,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    u = User.find_by_username(params[:username])
+    u = User.find_by_email(params[:email])
 
     if u.present? && u.authenticate(params[:password])
       session[:user_id] = u.id
-      redirect_to sessions_url, notice: "Signed in successfully."
+      # Event.create
+      redirect_to new_event_url, notice: "Signed in successfully."
     else
       redirect_to new_session_url, notice: "Nice try."
     end
@@ -15,6 +16,6 @@ class SessionsController < ApplicationController
 
   def destroy
     reset_session
-    redirect_to options_url, notice: "Signed out successfully."
+    redirect_to new_session_url, notice: "Signed out successfully."
   end
 end
